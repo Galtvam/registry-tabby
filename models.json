@@ -182,14 +182,26 @@
   {
     "license_name": "Mistral AI Non-Production License",
     "license_url": "https://mistral.ai/licenses/MNPL-0.1.md",
-    "name": "Codestral-22B",
+    "name": "Codestral-22B-Q4_K_S",
     "provider_url": "https://huggingface.co/mistralai/Codestral-22B-v0.1",
     "prompt_template": "[SUFFIX]{suffix}[PREFIX]{prefix}",
     "chat_template": "<s>{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '[INST] ' + message['content'] + ' [/INST]' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '</s> ' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
     "urls": [
       "https://huggingface.co/bartowski/Codestral-22B-v0.1-GGUF/resolve/main/Codestral-22B-v0.1-Q4_K_S.gguf"
     ],
-    "sha256": "003e48ed892850b80994fcddca2bd6b833b092a4ef2db2853c33a3144245e06c"
+    "sha256": "d093579303c696e74dfcbfadcbac9ad9303829f0e6e0dbc02b95f32447782440"
+  },
+  {
+    "license_name": "Mistral AI Non-Production License",
+    "license_url": "https://mistral.ai/licenses/MNPL-0.1.md",
+    "name": "Codestral-22B-IQ4",
+    "provider_url": "https://huggingface.co/mistralai/Codestral-22B-v0.1",
+    "prompt_template": "[SUFFIX]{suffix}[PREFIX]{prefix}",
+    "chat_template": "<s>{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '[INST] ' + message['content'] + ' [/INST]' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '</s> ' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "urls": [
+      "https://huggingface.co/bartowski/Codestral-22B-v0.1-GGUF/resolve/main/Codestral-22B-v0.1-IQ4_XS.gguf"
+    ],
+    "sha256": "6367ca4d53ec125dcef56a2d19f506e504d3a30ff51a0c5af7c1b70e6baefe5a"
   },
   {
     "name": "Nomic-Embed-Text",
